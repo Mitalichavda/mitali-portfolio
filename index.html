@@ -17,7 +17,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
-  <link rel="icon" href="images/Logo-05.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/Logo-05.png" type="image/x-icon">
 
 
   <style>
@@ -485,43 +485,54 @@ projects-section {
   color: #4c837a; /* Teal accent */
 }
 
-/* Project Cards Grid */
-.projects-section .row {
-  gap: 1.5rem;
-  justify-content: center;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* Individual Project Card */
 .project-card {
-  background-color: #ffffff;
-  border: 2px dashed #4c837a; /* teal dashed border */
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #4c837a;
-  font-weight: 600;
-  font-size: 1.2rem;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  cursor: default;
+  padding: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
-/* Optional: Hover effect for cards */
 .project-card:hover {
-  box-shadow: 0 8px 20px rgba(76, 131, 122, 0.3);
-  border-color: #038a87; /* slightly darker teal on hover */
-  color: #038a87;
+  transform: translateY(-5px);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .project-card {
-    height: 180px;
-    font-size: 1.1rem;
-  }
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
 }
+
+.project-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  background-color: #17594A;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
 
 .contact-section {
   background-color: #111;
@@ -700,13 +711,12 @@ projects-section {
       <img src="images/pfp.jpg" alt="Your Name" />
     </div>
     <div class="about-text">
-      <p>
-       Hi, I'm a passionate Fullstack Developer and Graphic Designer. I love crafting visually appealing and user-friendly digital experiences. Whether it’s building responsive web apps or designing eye-catching visuals, I bring creativity and precision to every project.
+      <p>Hi, I'm a passionate Full-Stack Developer and Graphic Designer who loves creating visually appealing and user-friendly digital experiences. Whether it’s building responsive web applications or designing bold, effective visuals, I bring creativity and attention to detail to every project.
+        </p>
+        <p>
+      I’ve worked on a variety of personal and academic projects, continuously improving my skills in both design and development. I’m always exploring new tools, learning modern technologies, and striving to build smarter digital solutions that leave a lasting impression.
       </p>
-      <p>
-        Over time, I've worked on various personal and client projects, constantly sharpening my skills in both design and development. I'm always exploring new tools, learning modern technologies, and challenging myself to create better, smarter digital solutions that leave an impact.
-      </p>
-      <a href="your-cv.pdf" download class="download-btn">Download CV</a>
+      <a href="images/Mitali Chavda_ Resume.pdf" download class="download-btn">Download CV</a>
     </div>
   </div>
 </section>
@@ -722,7 +732,8 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-html5 fa-3x mb-3 text-danger"></i>
+            <img src="tools/html.png" alt="HTML" width="50" height="50" title="Adobe XD">
+            <img src="tools/css-3.png" alt="CSS" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">HTML & CSS</h5>
             <p class="card-text">Crafting structured, responsive, and pixel-perfect designs with clean code.</p>
           </div>
@@ -732,7 +743,7 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-js fa-3x mb-3 text-warning"></i>
+            <img src="tools/js.png" alt="JavaScript" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">JavaScript</h5>
             <p class="card-text">Building interactive interfaces and dynamic web functionality.</p>
           </div>
@@ -742,7 +753,7 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-bootstrap fa-3x mb-3 text-primary"></i>
+           <img src="tools/bootstrap-logo-shadow.png" alt="Bootstrap" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">Bootstrap</h5>
             <p class="card-text">Responsive, mobile-first front-end development with prebuilt components.</p>
           </div>
@@ -752,7 +763,7 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-angular fa-3x mb-3 text-danger"></i>
+            <img src="tools/angular.png" alt="AngularJS" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">AngularJS</h5>
             <p class="card-text">Building dynamic and scalable single-page applications.</p>
           </div>
@@ -762,7 +773,7 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-php fa-3x mb-3 text-secondary"></i>
+            <img src="tools/php.png" alt="PHP" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">PHP</h5>
             <p class="card-text">Creating server-side web applications and APIs with PHP.</p>
           </div>
@@ -772,7 +783,7 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fas fa-database fa-3x mb-3 text-info"></i>
+            <img src="tools/mysql.png" alt="MySQL" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">MySQL</h5>
             <p class="card-text">Storing and managing relational data efficiently and securely.</p>
           </div>
@@ -782,7 +793,7 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-drupal fa-3x mb-3 text-primary"></i>
+            <img src="tools/drupal.png" alt="Drupal" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">Drupal</h5>
             <p class="card-text">Managing and developing CMS-based websites with Drupal.</p>
           </div>
@@ -792,7 +803,7 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-adobe fa-3x mb-3" style="color: #ff0000;"></i>
+            <img src="tools/xd.png" alt="Adobe XD" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">Adobe XD</h5>
             <p class="card-text">Designing user interfaces and prototypes for seamless UX.</p>
           </div>
@@ -802,7 +813,8 @@ projects-section {
       <div class="col-md-4">
         <div class="card h-100 skill-card">
           <div class="card-body">
-            <i class="fab fa-creative-commons-sampling-plus fa-3x mb-3" style="color: #ff69b4;"></i>
+            <img src="tools/photoshop.png" alt="Adobe Photoshop" width="50" height="50" title="Adobe XD">
+            <img src="tools/illustrator.png" alt="Adobe Illustrator" width="50" height="50" title="Adobe XD">
             <h5 class="card-title">Photoshop & Illustrator</h5>
             <p class="card-text">Creating professional graphics, branding, and visual assets.</p>
           </div>
@@ -842,33 +854,162 @@ projects-section {
   <!-- Projects Section -->
 <section id="projects" class="projects-section py-5" style="background: #faf9f6;">
   <div class="container">
-    <h2 class="section-title" style="color:#222; margin-bottom: 3rem; text-align: center;">
-      My <span style="color:#4c837a;">Projects</span>
+    <h2 class="section-title" style="color:#4c837a;; margin-bottom: 3rem; text-align: center;">
+      My Projects
     </h2>
 
-    <div class="row g-4 justify-content-center">
-      <!-- Project Card 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card bg-white rounded shadow-sm p-4" style="height: 220px; display: flex; align-items: center; justify-content: center; border: 2px dashed #4c837a; color: #4c837a; font-weight: 600; font-size: 1.2rem;">
-          Project 1
+    <section id="frontend-projects">
+  <h2 class="text-center mb-5 text-dark">Frontend Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <img src="images/zollo-ss.jpg" alt="Shoe Brand Website">
+      <h3>Shoe Brand Website</h3>
+      <p>A single-page responsive landing site for a fictional footwear brand using HTML, CSS & JS.</p>
+      <a href="Zollo/index.html" target="_blank">View Project</a>
+    </div>
+
+
+    <div class="project-card">
+      <img src="images/notenest-ss.jpg" alt="To-Do List App">
+      <h3>Notenest App</h3>
+      <p>JavaScript-based task manager with add/remove functionality and local storage.</p>
+      <a href="NoteNest/index.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/hotstar-ss.jpg" alt="Disney+ Hotstar Clone">
+      <h3>Disney+Hotstar Clone</h3>
+      <p>A front-end clone of the Disney+ Hotstar site using HTML, CSS & JS for layout & styling.</p>
+      <a href="Hotstar clone/index.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/WanderScape.jpg" alt="Travel Website">
+      <h3>WanderScape Travel Site</h3>
+      <p>A multi-page responsive website for a travel brand built with HTML, CSS, and Bootstrap.</p>
+      <a href="WanderScape/index.html" target="_blank">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="fullstack-projects">
+  <h2 class="text-center mb-5 text-dark">Fullstack / Backend Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <img src="images/CRUD-ss.jpg" alt="Student Record CRUD Panel">
+      <h3>Student Record CRUD Panel</h3>
+      <p>A PHP & MySQL based dashboard to create, read, update, and delete student records.</p>
+      <button class="btn btn-secondary btn-sm" disabled title="Live preview not available for PHP project">
+  View
+</button>
+    </div>
+
+    <div class="project-card">
+      <img src="images/loginn-ss.jpg" alt="Login & Register System">
+      <h3>Login & Register System</h3>
+      <p>User authentication system with sessions, validations, and database integration.</p>
+      <button class="btn btn-secondary btn-sm" disabled title="Live preview not available for PHP project">
+  View
+</button>
+    </div>
+
+    <div class="project-card">
+      <img src="images/real-estate-ss.jpg" alt="Real-Estate Website">
+      <h3>Real-Estate Website</h3>
+      <p>Full-stack property listing website using PHP and MySQL with admin and user modules.</p>
+      <button class="btn btn-secondary btn-sm" disabled title="Live preview not available for PHP project">
+  View
+</button>
+    </div>
+
+    <div class="project-card">
+      <img src="images/movie-app-ss.jpg" alt="Movie Search App">
+      <h3>Movie Search App</h3>
+      <p>AngularJS project using OMDb API to search movies, show details dynamically.</p>
+      <a href="movie-app/index.html" target="_blank">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/daily-planner-ss.jpg" alt="Daily Planner Angular App">
+      <h3>Daily Planner</h3>
+      <p>An AngularJS-based task planner that allows users to manage their day with dynamic updates.</p>
+      <a href="daily-planner/index.html" target="_blank">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="graphic-design" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 text-dark">Graphic Design Projects</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- 1. Stationery Design -->
+      <div class="col">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="images/stationary-01.jpg" class="card-img-top" alt="Stationery Design" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Stationery Design</h5>
+            <p class="card-text">Professional business cards, letterheads, and branding materials.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card bg-white rounded shadow-sm p-4" style="height: 220px; display: flex; align-items: center; justify-content: center; border: 2px dashed #4c837a; color: #4c837a; font-weight: 600; font-size: 1.2rem;">
-          Project 2
+      <!-- 2. Post Design -->
+      <div class="col">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="images/Coming Soon-01.png" class="card-img-top" alt="Post Design" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Social Media Post</h5>
+            <p class="card-text">Creative and festive posts designed for Instagram and Facebook.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Project Card 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="project-card bg-white rounded shadow-sm p-4" style="height: 220px; display: flex; align-items: center; justify-content: center; border: 2px dashed #4c837a; color: #4c837a; font-weight: 600; font-size: 1.2rem;">
-          Project 3
+      <!-- 3. Logo Design -->
+      <div class="col">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="images/XtremeAuto-04.png" class="card-img-top" alt="Logo Design" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Logo Design</h5>
+            <p class="card-text">Minimal to bold logos tailored for brand identity.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Add more project cards as needed -->
+      <!-- 4. Website UI Design -->
+      <div class="col">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="images/livia.jpg" class="card-img-top" alt="Web UI" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Website UI Design</h5>
+            <p class="card-text">Clean and responsive website wireframes and layouts using Adobe XD.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Mobile UI Design -->
+      <div class="col">
+        <div class="card project-card h-100 shadow-sm">
+          <img src="images/calmi.jpg" class="card-img-top" alt="Mobile UI" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Mobile App UI</h5>
+            <p class="card-text">Modern app interfaces designed for intuitive user experience.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
     </div>
   </div>
 </section>
