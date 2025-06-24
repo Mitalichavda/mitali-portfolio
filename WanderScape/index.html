@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/logo-01.png" type="image/x-icon">
+
+    <style>
+ /* ========= Root Variables ========= */
+:root {
+  --primary-color: #009688;
+  --accent-color: #f4c542;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --light-accent: #ccefff;
+}
+
+/* ========= Base Reset ========= */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= Navbar Styling ========= */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand img {
+  max-height: 50px;
+}
+
+.nav-link {
+  color: var(--text-color);
+  margin-left: 15px;
+  position: relative;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+.sticky-top {
+  transition: all 0.3s ease-in-out;
+  z-index: 1030; /* ensures navbar stays above everything */
+}
+
+.carousel-caption {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#heroCarousel .carousel-item {
+  height: 90vh; /* Adjust as needed */
+}
+
+#heroCarousel .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-img-top {
+  height: 250px;         
+  object-fit: cover;     
+  border-radius: 8px 8px 0 0;
+}
+
+.btn{
+    background-color: var(--accent-color);
+}
+
+.btn:hover{
+    background-color: var(--light-accent);
+    color: var(--text-color);
+}
+
+.container h2{
+    color: var(--primary-color);
+}
+
+.highlight-box:hover {
+  background-color:var(--light-accent);
+  transition: all 0.3s ease;
+  transform: translateY(-5px);
+}
+
+i{
+  color: var(--accent-color);
+}
+
+footer a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        
+        <a class="navbar-brand" href="#">
+        <img src="images/logo-02.png" alt="Logo" width="120" height="auto">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-uppercase fw-semibold">
+            <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="destination.html">Destination</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+  <div class="carousel-inner">
+
+    <!-- Saputara -->
+    <div class="carousel-item active">
+      <img src="images/saputara.jpg" class="d-block w-100" alt="Saputara">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-white">Breathe the Hills of Saputara</h1>
+        <a href="packages.html" class="btn btn-lg mt-3">Explore Saputara</a>
+      </div>
+    </div>
+
+    <!-- Goa -->
+    <div class="carousel-item">
+      <img src="images/goa.jpg" class="d-block w-100" alt="Goa">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-white">Feel the Freedom of Goa Beaches</h1>
+        <a href="booking.html" class="btn btn-lg mt-3">Book Your Getaway</a>
+      </div>
+    </div>
+
+    <!-- Jaipur -->
+    <div class="carousel-item">
+      <img src="images/jaipur.jpg" class="d-block w-100" alt="Jaipur">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-white">Step Into Royal Heritage in Jaipur</h1>
+        <a href="destination.html" class="btn btn-lg mt-3">Discover Jaipur</a>
+      </div>
+    </div>
+
+    <!-- Manali -->
+    <div class="carousel-item">
+      <img src="images/manali.jpg" class="d-block w-100" alt="Manali">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-white">Adventure & Chill in Manali</h1>
+        <a href="packages.html" class="btn btn-lg mt-3">View Packages</a>
+      </div>
+    </div>
+
+    <!-- Rann of Kutch -->
+    <div class="carousel-item">
+      <img src="images/kutch.jpg" class="d-block w-100" alt="Rann of Kutch">
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+        <h1 class="display-4 fw-bold text-white">Witness the White Wonders of Kutch</h1>
+        <a href="gallery.html" class="btn btn-lg mt-3">Experience the Rann</a>
+      </div>
+    </div>
+
+    </div>
+    </div>
+
+    <section class="featured-destinations py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold">Featured Destinations</h2>
+      <div class="row g-4">
+
+        <!-- Paris -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/paris.jpg" class="card-img-top" alt="Paris">
+            <div class="card-body">
+              <h5 class="card-title">Paris, France</h5>
+              <p class="card-text">Fall in love with the City of Lights — Eiffel Tower, art, fashion and romance.</p>
+              <a href="destination.html#paris" class="btn">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kerala -->
+      <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+          <img src="images/kerala.jpg" class="card-img-top" alt="Kerala">
+          <div class="card-body">
+          <h5 class="card-title">Kerala, India</h5>
+          <p class="card-text">Cruise through tranquil backwaters, lush greenery, and Ayurvedic bliss in God’s Own Country.</p>
+          <a href="destination.html#kerala" class="btn">Explore</a>
+          </div>
+      </div>
+      </div>
+
+        <!-- Dubai -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/dubai.jpg" class="card-img-top" alt="Dubai">
+            <div class="card-body">
+              <h5 class="card-title">Dubai, UAE</h5>
+              <p class="card-text">From desert safaris to Burj Khalifa, experience the luxury of Dubai.</p>
+              <a href="destination.html#dubai" class="btn">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Switzerland -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/switzerland.jpg" class="card-img-top" alt="Switzerland">
+            <div class="card-body">
+              <h5 class="card-title">Switzerland</h5>
+              <p class="card-text">Snowy Alps, scenic trains, and peaceful lakes in Europe’s alpine paradise.</p>
+              <a href="destination.html#switzerland" class="btn">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tokyo -->
+      <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+          <img src="images/tokyo.jpg" class="card-img-top" alt="Tokyo">
+          <div class="card-body">
+          <h5 class="card-title">Tokyo, Japan</h5>
+          <p class="card-text">A perfect fusion of tradition and tech—Explore neon streets, temples, and sushi delights.</p>
+          <a href="destination.html#tokyo" class="btn">Explore</a>
+          </div>
+      </div>
+      </div>
+
+
+        <!-- Bali -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/bali.jpg" class="card-img-top" alt="Bali">
+            <div class="card-body">
+              <h5 class="card-title">Bali, Indonesia</h5>
+              <p class="card-text">Tropical paradise of rice terraces, beaches, temples, and spirituality.</p>
+              <a href="destination.html#bali" class="btn">Explore</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-us py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold">Why Choose Us</h2>
+      <div class="row g-4 text-center">
+
+        <!-- Box 1 -->
+        <div class="col-md-3">
+          <div class="p-4 border rounded shadow-sm h-100 highlight-box">
+            <i class="fas fa-medal fa-2x mb-3"></i>
+            <h5 class="fw-semibold">Trusted Experts</h5>
+            <p class="text-muted">Years of experience in planning unforgettable trips.</p>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="col-md-3">
+          <div class="p-4 border rounded shadow-sm h-100 highlight-box">
+            <i class="fas fa-suitcase-rolling fa-2x mb-3"></i>
+            <h5 class="fw-semibold">Custom Packages</h5>
+            <p class="text-muted">Tailored tours that match your style and budget.</p>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="col-md-3">
+          <div class="p-4 border rounded shadow-sm h-100 highlight-box">
+            <i class="fas fa-wallet fa-2x mb-3"></i>
+            <h5 class="fw-semibold">Affordable Prices</h5>
+            <p class="text-muted">Best value trips without compromising on comfort.</p>
+          </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="col-md-3">
+          <div class="p-4 border rounded shadow-sm h-100 highlight-box">
+            <i class="fas fa-headset fa-2x mb-3"></i>
+            <h5 class="fw-semibold">24/7 Support</h5>
+            <p class="text-muted">We’re here whenever you need us, wherever you are.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">WanderScape</h4>
+        <p>Explore the world with curated travel experiences designed just for you.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-semibold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="destination.html" class="text-white text-decoration-none">Destinations</a></li>
+          <li><a href="packages.html" class="text-white text-decoration-none">Packages</a></li>
+          <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="booking.html" class="text-white text-decoration-none">Booking</a></li>
+        </ul>
+      </div>
+
+    
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-semibold">Get in Touch</h5>
+        <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope me-2"></i> hello@wanderscape.com</p>
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-top border-light mt-4">
+    <p class="text-center mb-0">© 2025 WanderScape. All rights reserved.</p>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+      
+    </script>
+</body>
+</html>

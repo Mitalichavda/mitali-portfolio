@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zollo</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="navlogo">
+                <img src="images/logo-01.png" width="100%">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+            </div>
+            <div class="space"></div>
+            <div class="navlist">
+               <li class="nav-link"><a href="#home">Home</a></li>
+               <li class="nav-link"><a href="#shop">Shop</a></li>
+               <li class="nav-link"><a href="#about">About</a></li>
+               <li class="nav-link"><a href="#contact">Contact</a></li>
+            </div>
+    </div>
+</nav>
+
+<div class="home" id="home">
+    <div class="hero">
+        <div class="hero-left">
+            <h1>Style 
+                Meets 
+                Speed.</h1>
+
+            <div class="hero-btn">
+                <a href="">Explore New</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <img class="mainimg" src="images/SABRINA+2+EP-removebg-preview.png" width="100%">
+        </div>
+    </div>
+</div>
+
+<div class="shop" id="shop">
+    <div class="shop-title">
+        <h2>Featured Products</h2>
+    </div>
+    <div class="shop-container">
+        <div class="products-card">
+            <div class="pr-img">
+                <img src="images/NIKE+DUNK+LOW+RETRO.jpg">
+            </div>
+            <div class="shoe-name">NIKE DUNK LOW RETRO</div>
+            <div class="shoe-pr">₹ 8 295.00</div>
+            <div class="shop-btn">
+                <a href="">Add to Cart</a>
+            </div>
+        </div>
+        <div class="products-card">
+            <div class="pr-img">
+                <img src="images/JORDAN+CMFT+ERA.jpg">
+            </div>
+            <div class="shoe-name">JORDAN CMFT ERA</div>
+            <div class="shoe-pr">₹ 10 795.00</div>
+            <div class="shop-btn">
+                <a href="">Add to Cart</a>
+            </div></div>
+        <div class="products-card">
+            <div class="pr-img">
+                <img src="images/NIKE+COURT+VISION+MID+NN.jpg">
+            </div>
+            <div class="shoe-name">NIKE COURT VISION MID</div>
+            <div class="shoe-pr">₹ 5 995.00</div>
+            <div class="shop-btn">
+                <a href="">Add to Cart</a>
+            </div>
+        </div>
+        <div class="products-card">
+            <div class="pr-img">
+                <img src="images/AIR+JORDAN+1+RETRO+HIGH+OG.jpg">
+            </div>
+            <div class="shoe-name">AIR JORDAN 1 RETRO HIGH</div>
+            <div class="shoe-pr"> ₹ 16 995.00</div>
+            <div class="shop-btn">
+                <a href="">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="about" id="about">
+    <div class="about-title">
+        <h2>Product Highlights</h2>
+    </div>
+    <div class="about-container">
+        <div class="highlight-item">
+            <div class="highlight-img">
+                <img src="images/light.png">
+            </div>
+            <div class="highlight">
+                Lightweight
+            </div>
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-img">
+                <img src="images/breathable.png">
+            </div>
+            <div class="highlight">
+                Breathable
+            </div>
+        </div>
+        <div class="highlight-item">
+        <div class="highlight-img">
+            <img src="images/security.png">
+        </div>
+        <div class="highlight">
+            Durable
+        </div>
+    </div>
+    </div>
+
+    <div class="para">
+        <div class="para-title">
+            <h2>About Us</h2>
+        </div>
+        <div class="ab-pr">
+            <p>Zollo is built for those who chase speed, comfort, and style. Our shoes blend modern tech with timeless design.</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer" id="contact">
+    <p>© 2025 Zollo. All rights reserved.</p>
+    <p>Follow us:
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </p>
+</div>
+
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('.navlist');
+    navList.classList.toggle('show');
+  }
+</script>
+
+
+</body>
+</html>

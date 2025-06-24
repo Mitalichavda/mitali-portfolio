@@ -1,0 +1,289 @@
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: #F9F9F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navlogo img {
+  width: 120px;
+  height: auto;
+}
+
+.navlist {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #1A1A1A;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link a:hover {
+  color: #FF6F61;
+  border-bottom: 2px solid #FF6F61;
+}
+
+/* Toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1A1A1A;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  color: #FF6F61;
+  margin-bottom: 20px;
+}
+
+.hero-btn a {
+  background-color: #FF6F61;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.hero-btn a:hover {
+  background-color: #e0554d;
+}
+
+.hero-btn {
+  margin-top: 30px;
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* ===== SHOP SECTION ===== */
+.shop-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 30px;
+  color: #222;
+}
+
+.shop-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.products-card {
+  background-color: #fff;
+  width: 250px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.products-card:hover {
+  transform: translateY(-5px);
+}
+
+.pr-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.shoe-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.8rem 0 0.2rem;
+}
+
+.shoe-pr {
+  color: #FF6F61;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.shop-btn a {
+  background-color: #FF6F61;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.shop-btn a:hover {
+  background-color: #e0554d;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.highlight-img img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.para {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #FF6F61;
+}
+
+.para-title h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.ab-pr p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #FF6F61;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navlist {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .navlist.show {
+    display: flex;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-btn {
+    margin: 20px auto;
+  }
+
+  .hero-right img {
+    max-width: 100%;
+  }
+}

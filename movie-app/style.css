@@ -1,0 +1,112 @@
+/* 🌑 Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  padding: 20px;
+}
+
+/* 🧱 Container */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* 🎬 Heading */
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #e50914;
+}
+
+/* 🔎 Input & Button */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 25px;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #bf0812;
+}
+
+/* 🎞 Movie Card */
+.movie-card {
+  margin-top: 30px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.movie-card img {
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.movie-card h2 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.movie-card p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* ❌ Error Message */
+.error {
+  color: red;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .movie-card {
+    padding: 15px;
+  }
+
+  .movie-card h2 {
+    font-size: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

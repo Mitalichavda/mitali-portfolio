@@ -1,0 +1,53 @@
+body {
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+#noteInput::placeholder {
+  color: #888;
+}
+
+/* Sticky footer fix */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+}
+
+/* Primary button override */
+.btn-primary {
+  background-color: #FFAA0F;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #e69500;
+}
+
+/* Highlighted note when marked done */
+.border-success {
+  border-color: #FFAA0F !important;
+}
+
+/* Done text color */
+.text-success {
+  color: #FFAA0F !important;
+}
+
+/* Optional: dark mode button tweaks */
+.form-check-input:checked {
+  background-color: #FFAA0F;
+  border-color: #FFAA0F;
+}
+
+.alert span {
+  font-size: 0.9rem;
+}

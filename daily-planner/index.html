@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="plannerApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/TaskController.js"></script>
+  <script src="services/TaskService.js"></script>
+</head>
+<body ng-controller="TaskController">
+
+  <div class="container">
+    <h1>Daily Planner</h1>
+
+    
+
+    <div class="add-task">
+      <input type="text" ng-model="newTask.title" placeholder="What needs to be done?">
+      <input type="date" ng-model="newTask.dueDate">
+      <button ng-click="addTask()"><i class="fas fa-plus"></i> Add Task</button>
+    </div>
+
+    <div class="task-list">
+        <div class="task" ng-repeat="task in tasks">
+        <input type="checkbox" ng-model="task.done" ng-change="saveTasks()">
+        <div class="task-info" ng-class="{done: task.done}">
+          <h3>{{ task.title }}</h3>
+          <p>Due: {{ task.dueDate | date:'MMM d, yyyy' }}</p>
+        </div>
+        <button class="delete-btn" ng-click="deleteTask($index)">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

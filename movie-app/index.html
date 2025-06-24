@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="movieApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MovieController">
+
+  <div class="container">
+    <h1>Movie Search</h1>
+
+    <input type="text" ng-model="movieName" placeholder="Enter movie name">
+    <button ng-click="searchMovie()">Search</button>
+
+    <div class="movie-card" ng-if="movie">
+      <img ng-src="{{ movie.Poster }}" alt="{{ movie.Title }}">
+      <h2>{{ movie.Title }} ({{ movie.Year }})</h2>
+      <p><strong>Genre:</strong> {{ movie.Genre }}</p>
+      <p><strong>Plot:</strong> {{ movie.Plot }}</p>
+    </div>
+
+    <p class="error" ng-if="error">{{ error }}</p>
+  </div>
+
+</body>
+</html>

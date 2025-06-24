@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages | WanderScape</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/logo-01.png" type="image/x-icon">
+
+
+
+<style>
+/* ========= Root Variables ========= */
+:root {
+  --primary-color: #009688;
+  --accent-color: #f4c542;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --light-accent: #ccefff;
+}
+
+/* ========= Base Reset ========= */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= Navbar Styling ========= */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand img {
+  max-height: 50px;
+}
+
+.nav-link {
+  color: var(--text-color);
+  margin-left: 15px;
+  position: relative;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+.sticky-top {
+  transition: all 0.3s ease-in-out;
+  z-index: 1030; /* ensures navbar stays above everything */
+}
+
+.packages-intro h2 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.packages-intro p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.package-img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.btn{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.btn:hover{
+    background-color: var(--light-accent);
+}
+
+i{
+  color: var(--accent-color);
+}
+
+footer a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+</style>
+
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#">
+            <img src="/images/logo-02.png" alt="Logo" width="120" height="auto">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav text-uppercase fw-semibold">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="destination.html">Destination</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="packages.html">Packages</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="booking.html">Booking</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="packages-intro py-5 text-center">
+    <div class="container">
+        <h2 class="mb-4">Tailored Travel Packages Just for You</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 800px;">
+        Whether you're planning a romantic honeymoon, a family vacation, or an adventurous escape, our travel packages are crafted to suit your needs and budget. Choose from a range of curated experiences designed to make every trip unforgettable.
+        </p>
+        </div>
+    </section>
+
+<section class="travel-packages py-5">
+  <div class="container">
+    <h3 class="text-center mb-5">Explore Our Top Travel Packages</h3>
+    <div class="row g-4">
+      
+      <!-- Package 1: Bali -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/bali.jpg" class="card-img-top package-img" alt="Bali">
+          <div class="card-body">
+            <h5 class="card-title">Bali Bliss</h5>
+            <p class="card-text">5 Days / 4 Nights – ₹49,999<br>Includes Hotel, Breakfast, Tours</p>
+            <a href="booking.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 2: Paris -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/paris.jpg" class="card-img-top package-img" alt="Paris">
+          <div class="card-body">
+            <h5 class="card-title">Romantic Paris</h5>
+            <p class="card-text">6 Days / 5 Nights – ₹79,999<br>Includes Flights, Hotel, Sightseeing</p>
+            <a href="booking.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 3: Goa -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/goa.jpg" class="card-img-top package-img" alt="Goa">
+          <div class="card-body">
+            <h5 class="card-title">Goa Getaway</h5>
+            <p class="card-text">3 Days / 2 Nights – ₹14,999<br>Beach Resort, Breakfast, Cruise</p>
+            <a href="booking.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 4: Leh Ladakh -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/leh.jpg" class="card-img-top package-img" alt="Leh Ladakh">
+          <div class="card-body">
+            <h5 class="card-title">Adventure in Leh</h5>
+            <p class="card-text">7 Days / 6 Nights – ₹35,000<br>Biking, Camping, Meals</p>
+            <a href="booking.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 5: Santorini -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/santorini.jpg" class="card-img-top package-img" alt="Santorini">
+          <div class="card-body">
+            <h5 class="card-title">Santorini Escape</h5>
+            <p class="card-text">5 Days / 4 Nights – ₹89,000<br>Luxury Villa, Wine Tour, Spa</p>
+            <a href="booking.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Package 6: Varanasi -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/varanasi.jpg" class="card-img-top package-img" alt="Varanasi">
+          <div class="card-body">
+            <h5 class="card-title">Spiritual Varanasi</h5>
+            <p class="card-text">3 Days / 2 Nights – ₹11,000<br>Guided Aarti Tour, Hotel, Meals</p>
+            <a href="booking.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">WanderScape</h4>
+        <p>Discover, explore, and experience the world with curated travel packages and unforgettable memories.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-semibold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="destination.html" class="text-white text-decoration-none">Destinations</a></li>
+          <li><a href="packages.html" class="text-white text-decoration-none">Packages</a></li>
+          <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="booking.html" class="text-white text-decoration-none">Booking</a></li>
+        </ul>
+      </div>
+
+    
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-semibold">Get in Touch</h5>
+        <p><i class="fas fa-phone me-2"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope me-2"></i> hello@wanderscape.com</p>
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white fs-5"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-top border-light mt-4">
+    <p class="text-center mb-0">© 2025 WanderScape. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
