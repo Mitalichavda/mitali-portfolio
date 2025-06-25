@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Cart - Zollo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .cart-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .cart-info {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .cart-name {
+      font-weight: bold;
+    }
+
+    .cart-price {
+      color: #FF6F61;
+    }
+
+    .remove-btn {
+      background-color: #ff4d4d;
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .empty-cart {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="navlogo">
+      <img src="images/logo-01.png" alt="Zollo Logo" />
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="navlist">
+      <li class="nav-link"><a href="index.html">Home</a></li>
+      <li class="nav-link"><a href="index.html#shop">Shop</a></li>
+      <li class="nav-link"><a href="index.html#about">About</a></li>
+      <li class="nav-link"><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+
+  <div class="cart-container">
+    <h1 class="cart-title">Your Cart</h1>
+    <div id="cart-items"></div>
+  </div>
+
+  <script>
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function renderCart() {
+      if (cartData.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+        return;
+      }
+
+      cartItemsContainer.innerHTML = cartData.map((item, index) => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <div class="cart-info">
+            <div class="cart-name">${item.name}</div>
+            <div class="cart-price">₹ ${item.price}</div>
+          </div>
+          <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        </div>
+      `).join('');
+    }
+
+    function removeItem(index) {
+      cartData.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cartData));
+      renderCart();
+    }
+
+    renderCart();
+  </script>
+
+</body>
+</html>
