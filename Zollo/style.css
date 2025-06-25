@@ -12,7 +12,7 @@ body {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,6 +27,12 @@ body {
   height: auto;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .navlist {
   display: flex;
   gap: 20px;
@@ -35,22 +41,14 @@ body {
 
 .nav-link a {
   text-decoration: none;
-  color: #1A1A1A;
+  color: #1a1a1a;
   font-weight: 500;
   transition: 0.2s;
 }
 
 .nav-link a:hover {
-  color: #FF6F61;
-  border-bottom: 2px solid #FF6F61;
-}
-
-/* Toggle button */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #1A1A1A;
+  color: #ff6f61;
+  border-bottom: 2px solid #ff6f61;
 }
 
 /* ===== HERO SECTION ===== */
@@ -72,6 +70,7 @@ body {
   font-size: 3.5rem;
   color: #FF6F61;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .hero-btn a {
@@ -81,15 +80,10 @@ body {
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 1rem;
-  transition: background 0.3s;
 }
 
 .hero-btn a:hover {
   background-color: #e0554d;
-}
-
-.hero-btn {
-  margin-top: 30px;
 }
 
 .hero-right {
@@ -100,7 +94,6 @@ body {
 .hero-right img {
   width: 100%;
   max-width: 500px;
-  height: auto;
 }
 
 /* ===== SHOP SECTION ===== */
@@ -108,7 +101,6 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-top: 30px;
-  color: #222;
 }
 
 .shop-container {
@@ -157,8 +149,6 @@ body {
   text-decoration: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
-  display: inline-block;
-  transition: 0.3s;
 }
 
 .shop-btn a:hover {
@@ -201,7 +191,7 @@ body {
 
 .para {
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px;
   background-color: #FF6F61;
 }
 
@@ -227,10 +217,6 @@ body {
   color: #555;
 }
 
-.footer p {
-  margin: 5px 0;
-}
-
 .footer a {
   color: #FF6F61;
   margin: 0 10px;
@@ -254,19 +240,14 @@ body {
     position: absolute;
     top: 70px;
     right: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    z-index: 1000;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
   }
 
   .navlist.show {
     display: flex;
-  }
-
-  .nav-link {
-    margin: 10px 0;
   }
 
   .hero {
@@ -277,13 +258,5 @@ body {
 
   .hero-left h1 {
     font-size: 2.5rem;
-  }
-
-  .hero-btn {
-    margin: 20px auto;
-  }
-
-  .hero-right img {
-    max-width: 100%;
   }
 }
