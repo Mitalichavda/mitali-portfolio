@@ -38,7 +38,7 @@
         <span class="responsive-line">Speed.</span>
         </h1>
         <div class="hero-btn">
-          <a href="#">Explore New</a>
+          <a href="#shop" >Explore New</a>
         </div>
       </div>
       <div class="hero-right">
@@ -58,7 +58,7 @@
         <div class="shoe-name">NIKE DUNK LOW RETRO</div>
         <div class="shoe-pr">₹ 8 295.00</div>
         <div class="shop-btn">
-          <a href="#">Add to Cart</a>
+          <a href="#" class="add-to-cart">Add to Cart</a>
         </div>
       </div>
       <div class="products-card">
@@ -68,17 +68,27 @@
         <div class="shoe-name">JORDAN CMFT ERA</div>
         <div class="shoe-pr">₹ 10 795.00</div>
         <div class="shop-btn">
-          <a href="#">Add to Cart</a>
+          <a href="#" class="add-to-cart">Add to Cart</a>
         </div>
       </div>
       <div class="products-card">
         <div class="pr-img">
           <img src="images/NIKE+COURT+VISION+MID+NN.jpg" />
         </div>
-        <div class="shoe-name">NIKE COURT VISION MID</div>
+        <div class="shoe-name">NIKE COURT VISION </div>
         <div class="shoe-pr">₹ 5 995.00</div>
         <div class="shop-btn">
-          <a href="#">Add to Cart</a>
+          <a href="#" class="add-to-cart">Add to Cart</a>
+        </div>
+      </div>
+      <div class="products-card">
+        <div class="pr-img">
+          <img src="images/AIR+JORDAN+1+RETRO+HIGH+OG.jpg" />
+        </div>
+        <div class="shoe-name">AIR JORDAN 1 RETRO</div>
+        <div class="shoe-pr">₹ 16 995.00</div>
+        <div class="shop-btn">
+          <a href="#" class="add-to-cart">Add to Cart</a>
         </div>
       </div>
     </div>
@@ -127,6 +137,19 @@
       const navList = document.querySelector(".navlist");
       navList.classList.toggle("show");
     }
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+  // Loop through and attach event
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); 
+      alert("Item added to cart!");
+      
+      
+    });
+  });
+
   </script>
 </body>
 </html>
