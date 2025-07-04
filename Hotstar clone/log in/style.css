@@ -1,0 +1,60 @@
+body{
+    background-color: #0c111b;
+    font-family: poppins;
+}
+
+.logo{
+	width:100%;
+	border:solid red px;
+}
+
+.card{
+	border:solid rgb(255, 255, 255) 1px;
+	border-radius: 25px;
+	width:25%;
+	margin:18px auto; 
+	padding: 5px;
+    color: white;
+	height: 350px;
+}
+
+.btn{
+	background-color: royalblue;
+	margin:10px auto;
+	width:40%;
+	text-align: center;
+	padding: 3px;
+	border-radius: 10px;
+}
+
+.mail{
+	padding:3px;
+	margin:0px 25px;
+}
+
+input{
+	width:90%;
+	height:25px; 
+}
+
+.sgn{
+	margin:0px 25px;
+}
+
+.txt{
+	margin:0px 25px;
+	font-size:11px; 
+    color: white;
+}
+
+.back{
+	width: 40%;
+	margin: 0px auto;
+    font-family: poppins;
+    color: darkgray;
+    text-shadow: #fff 0 0 0;
+	text-decoration: none;
+	text-align: center;
+}
+
+
