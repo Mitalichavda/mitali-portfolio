@@ -1,0 +1,435 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body{
+    background-color: black;
+}
+
+.main{
+    margin: 0 auto;
+}
+
+.hmpg{
+    background-image:radial-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)) , url(https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_large.jpg) ;
+    background-size:100%;
+    background-position: top center;
+    top:-50px;
+    background-repeat: no-repeat;
+    height: 650px;
+    width:100%;
+}
+
+.navbar{
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 7px;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 15vw;
+    padding: 20px;
+}
+
+.side{
+    padding: 25px;
+}
+
+.lng{
+    background: rgb(35, 35, 35);
+    color: white;
+    border:rgba(95, 95, 95, 1) solid 1px;
+    padding: 5px 15px;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh;
+ 
+}
+
+.btn{
+    padding: 8px 20px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: #f52c36;
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+
+.hmtxt{
+    width: 45vw;
+    position: relative ;
+    top: 70px;
+    margin: 0 auto;
+    color: white;
+}
+
+.tit{
+    font-weight: 800;
+    font-size: 54px;
+    text-align: center;
+    padding: 12px;
+}
+
+.sbtit{
+    font-weight: 600;
+    text-align: center;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.memb{
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.email{
+    padding: 10px;
+    width: 65%;
+}
+
+.gmail{
+    background: rgba(35, 35, 35,0.5);
+    border: rgba(95, 95, 95, 1) solid 1px;
+    padding: 18px;
+    font-size: 16px;
+    color: rgba(95, 95, 95, 1);
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.w1{
+    display: flex;
+}
+
+.strt{
+    width: 35%;
+    padding: 10px;
+}
+
+.gs{
+    padding: 16px;
+    width: 100%;
+    background-color: #E50914;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.gs:hover{
+    background-color: #f52c36;
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+.cards{
+    width: 80vw;
+    margin: 60px auto;
+    color: white;
+}
+
+.morecard{
+    padding: 10px 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card1,.card2,.card3,.card4{
+    width: 23%;
+    font-size: 27px;
+    padding: 30px 30px 0px 15px;
+    font-weight: 800;
+    height: 280px;
+    background: linear-gradient(149deg,#192247 0%,#210e17 96.86%);
+    border-radius: 15px;
+}
+
+.grcard{
+    display: flex;
+    justify-content: space-around;
+}
+
+.que{
+    width: 80vw;
+    margin: 5px auto;
+    color: white;
+    padding: 10px;
+}
+
+.quetit{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.slids{
+    background-color: #2D2D2D;
+    width: 80%;
+    padding: 25px;
+    margin: 7px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.slids:hover{
+    transition: 0.5s;
+    background-color: #5c5a5a;
+    transform: scale(1.01);
+}
+
+.foot{
+    width: 80vw;
+    margin: 5px auto;
+    padding: 15px;
+}
+
+.fttit{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ftmail{
+    width: 60%;
+    padding-right: 10px;
+}
+
+.maill{
+    background: rgba(35, 35, 35,0.5);
+    border: rgba(95, 95, 95, 1) solid 1px;
+    padding: 16px;
+    font-size: 18px;
+    color: rgba(95, 95, 95, 1);
+    font-weight: 600;
+    border-radius: 5px;
+    width: 105%;
+}
+
+.footmail{
+    display: flex;
+    padding-top: 10px;
+}
+
+.hs{
+    padding: 16px;
+    width: 100%;
+    background-color: #E50914;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.hs:hover{
+    background-color: #f52c36;
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+.help{
+    color: rgba(95, 95, 95, 1);
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    color: rgba(95, 95, 95, 1);
+}
+
+.grid-item{
+    padding: 7px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.ftlng{
+    padding: 10px;
+}
+
+.lang{
+    background: rgb(35, 35, 35);
+    color: white;
+    border:rgba(95, 95, 95, 1) solid 1px;
+    padding: 5px 15px;
+    font-weight: bold;
+    width: 10vw;
+    height: 5vh;   
+}
+
+
+/* ========== Tablet View ========== */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 40vw;
+    padding: 10px;
+  }
+
+  .lng, .btn {
+    width: auto;
+    height: auto;
+    margin: 5px;
+  }
+
+  .hmtxt {
+    width: 90vw;
+    top: 40px;
+  }
+
+  .tit {
+    font-size: 40px;
+  }
+
+  .sbtit {
+    font-size: 16px;
+  }
+
+  .memb {
+    font-size: 14px;
+  }
+
+  .w1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email, .strt {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .grcard {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .card1, .card2, .card3, .card4 {
+    width: 45%;
+    height: auto;
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  .footmail {
+    flex-direction: column;
+  }
+
+  .ftmail, .hs {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .gridcontainer {
+    grid-template-columns: auto auto;
+  }
+}
+
+
+/* ========== Mobile View ========== */
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .logo {
+    width: 60vw;
+    padding: 10px;
+  }
+
+  .hmpg {
+    height: 550px;
+    background-size: cover;
+  }
+
+  .hmtxt {
+    width: 95vw;
+    top: 20px;
+  }
+
+  .tit {
+    font-size: 28px;
+  }
+
+  .sbtit {
+    font-size: 14px;
+  }
+
+  .memb {
+    font-size: 12px;
+  }
+
+  .w1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email, .strt {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  .grcard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card1, .card2, .card3, .card4 {
+    width: 90%;
+    height: auto;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .slids {
+    width: 95%;
+  }
+
+  .footmail {
+    flex-direction: column;
+  }
+
+  .ftmail, .hs {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .gridcontainer {
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+
+  .lang {
+    width: 100%;
+  }
+}
