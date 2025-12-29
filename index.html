@@ -403,6 +403,64 @@
         justify-content: center;
       }
     }
+
+      /* EXPERIENCE SECTION */
+  .experience-section {
+    background: linear-gradient(135deg, #f5f7fa, #ffffff);
+  }
+
+  .experience-card {
+    max-width: 650px;
+    background: #ffffff;
+    padding: 45px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .experience-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .experience-logo {
+    width: 140px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .company-name {
+    color: #6c757d;
+    font-weight: 600;
+  }
+
+  .duration {
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+  .experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .experience-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #444;
+  }
+
+  .experience-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6f42c1; /* premium purple */
+    font-size: 22px;
+  }
+
+
  
   .education-section {
     background-color: #111;
@@ -675,6 +733,7 @@ projects-section {
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -872,6 +931,35 @@ projects-section {
 
     </div>
   </section>
+
+  <!-- EXPERIENCE SECTION -->
+<section id="experience" class="experience-section py-5">
+  <div class="container text-center">
+    
+    <h2 class="fw-bold mb-2">Experience</h2>
+    <p class="text-muted mb-5">Internship & Professional Journey</p>
+
+    <div class="experience-card mx-auto">
+      
+      <img src="images/Cimpress logo.png" 
+           alt="Cimpress Logo" 
+           class="experience-logo">
+
+      <h4 class="mt-3 mb-1">Graphic Design Intern</h4>
+      <h5 class="company-name mb-2">Cimpress</h5>
+      <span class="duration">Aug 2025 – Present</span>
+
+      <ul class="experience-list mt-4">
+        <li>Design review & quality check for print-ready files</li>
+        <li>Verified layout, bleed, margins & resolution standards</li>
+        <li>Ensured brand compliance & production accuracy</li>
+        <li>Worked with team to refine customer-ready designs</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
 
   <!-- Projects Section -->
 <section id="projects" class="projects-section py-5" style="background: #faf9f6;">
